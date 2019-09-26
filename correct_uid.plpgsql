@@ -1,0 +1,172 @@
+BEGIN
+  IF NEW.uid like 'B485%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B485', 'B385');
+  END IF;
+  IF NEW.uid like 'A7C6-065' THEN
+     NEW.uid = REPLACE(NEW.uid, 'A7C6-065', 'A7C6-0165');
+  END IF;
+  
+  IF NEW.uid like 'C22B-145' THEN
+     NEW.uid = REPLACE(NEW.uid, 'C22B-145', 'C22B-0145');
+  END IF;  
+  IF NEW.uid = 'A7C6-0043' THEN
+  	 RAISE EXCEPTION 'A7C6-0043 blacklisted';
+  END IF;
+  IF NEW.uid = 'A7C6-0127' THEN
+  	 RAISE EXCEPTION 'A7C6-0043 blacklisted';
+  END IF;
+  IF NEW.uid = 'A7C6-0110' THEN
+  	 RAISE EXCEPTION 'A7C6-0110 blacklisted';
+  END IF;
+  IF NEW.uid = 'F55F-0227' THEN
+  	 RAISE EXCEPTION 'F55F-0227 blacklisted';
+  END IF;
+  IF NEW.uid = 'A7C6-0051' THEN
+  	 RAISE EXCEPTION 'A7C6-0051 blacklisted';
+  END IF;
+  IF NEW.uid = 'B385-0094' THEN
+  	 RAISE EXCEPTION 'B385-0094 blacklisted';
+  END IF;
+  IF NEW.uid = 'F55F-0103' THEN
+  	 RAISE EXCEPTION 'F55F-0103 blacklisted';
+  END IF;
+  IF NEW.uid = 'B384-0161' THEN
+  	 RAISE EXCEPTION 'B384-0161 blacklisted';
+  END IF; 
+  IF NEW.uid = 'A7C6-0056' THEN
+  	 RAISE EXCEPTION 'A7C6-0056 blacklisted';
+  END IF;
+  IF NEW.uid = 'F55F' THEN
+  	 RAISE EXCEPTION 'F55F only blacklisted';
+  END IF;
+  IF NEW.uid like '0BC7-144' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC7-144', '0BC7-0144');
+  END IF;	
+  IF NEW.uid like 'F55F-120' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F-120', 'F55F-0120');
+  END IF;	
+  IF NEW.uid like 'F55F-123' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F-123', 'F55F-0123');
+  END IF;	
+  IF NEW.uid like 'F55F-193' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F-193', 'F55F-0193');
+  END IF;
+  IF NEW.uid like 'F55F-00' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F-00', 'F55F-0091');
+  END IF;
+  IF NEW.uid like '0BC7-135' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC7-135', '0BC7-0135');
+  END IF;	
+  IF NEW.uid like '0BC7-126' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC7-126', '0BC7-0126');
+  END IF;	
+  IF NEW.uid like '%c22b_%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'c22b_', 'C22B-');
+  END IF;	 
+  IF NEW.uid like '%c22b-%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'c22b-', 'C22B-');
+  END IF;
+  IF NEW.uid like 'B380%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B380', 'B385');
+  END IF;
+  IF NEW.uid like 'OBC7%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'OBC7', '0BC7');
+  END IF;
+  IF NEW.uid like '0Bc7%' THEN
+     NEW.uid = REPLACE(NEW.uid, '0Bc7', '0BC7');
+  END IF;
+  IF NEW.uid like 'OBC-%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'OBC-', '0BC7-');
+  END IF;
+  IF NEW.uid like 'FF55' THEN
+     NEW.uid = REPLACE(NEW.uid, 'FF55', 'F55F');
+  END IF;
+  IF NEW.uid like 'b385%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'b385', 'B385');
+  END IF;
+  IF NEW.uid like 'a7c6%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'a7c6', 'A7C6');
+  END IF;
+  IF NEW.uid like 'f55f%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'f55f', 'F55F');
+  END IF;
+  IF NEW.uid like 'A7C-%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'A7C-', 'A7C6-');
+  END IF;
+  IF NEW.uid like '%AF55F%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'AF55F', 'F55F');
+  END IF;
+  IF NEW.uid like '%FF55%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'FF55', 'F55F');
+  END IF;
+  
+   IF NEW.uid like '0BC7 %' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC7 ', '0BC7-');
+  END IF;
+  
+  IF NEW.uid like 'A7C6 %' THEN
+     NEW.uid = REPLACE(NEW.uid, 'A7C6 ', 'A7C6-');
+  END IF;
+  IF NEW.uid like 'B385 %' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B385 ', 'B385-');
+  END IF;
+  IF NEW.uid like 'B3B5%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B3B5', 'B385');
+  END IF;
+  
+  IF NEW.uid like 'B385-010' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B385-010', 'B385-0101');
+  END IF;
+  IF NEW.uid like 'C22B %' THEN
+     NEW.uid = REPLACE(NEW.uid, 'C22B ', 'C22B-');
+  END IF;
+  
+  IF NEW.uid like 'F55F %' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F ', 'F55F-');
+  END IF;
+  
+  IF NEW.uid like '0BC70%' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC70', '0BC7-0');
+  END IF;
+  
+  IF NEW.uid like 'A7C60%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'A7C60', 'A7C6-0');
+  END IF;
+  
+  IF NEW.uid like 'B3850%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'B3850', 'B385-0');
+  END IF;
+  
+  IF NEW.uid like 'C22B0%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'C22B0', 'C22B-0');
+  END IF;
+  
+  IF NEW.uid like 'F55F0%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'F55F0', 'F55F-0');
+  END IF;
+  IF NEW.uid like 'C22B- %' THEN
+     NEW.uid = REPLACE(NEW.uid, 'C22B- ', 'C22B-');
+  END IF;
+  IF NEW.uid like 'c22b%' THEN
+     NEW.uid = REPLACE(NEW.uid, 'c22b', 'C22B');
+  END IF;
+  IF NEW.uid like '0BC70%' THEN
+     NEW.uid = REPLACE(NEW.uid, '0BC70', '0BC7-0');
+  END IF;
+  IF NEW.uid like '%_%' THEN
+     NEW.uid = REPLACE(NEW.uid, '_', '-');
+  END IF;
+  IF NEW.uid like '%- %' THEN
+     NEW.uid = REPLACE(NEW.uid, '- ', '-');
+  END IF;
+  IF NEW.uid like '%--%' THEN
+     NEW.uid = REPLACE(NEW.uid, '--', '-');
+  END IF;
+  IF NEW.uid like '% -%' THEN
+     NEW.uid = REPLACE(NEW.uid, ' -', '-');
+  END IF;
+  IF NEW.uid like '% %' THEN
+     NEW.uid = REPLACE(NEW.uid, ' ', '-');
+  END IF;
+RETURN NEW;
+END;
