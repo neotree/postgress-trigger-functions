@@ -1,0 +1,70 @@
+DECLARE passed BOOLEAN;
+BEGIN
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'B485', 'B385') WHERE uid like 'B485%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'B385-010', 'B385-0101') WHERE uid like 'B385-010';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'F55F-00', 'F55F-0091') WHERE uid like 'F55F-00';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'F55F-193', 'F55F-0193') WHERE uid like 'F55F-193';
+		UPDATE public.sessions		
+		SET uid = REPLACE(uid, '--', '-') WHERE uid like '%--%';
+  		UPDATE public.sessions
+		SET uid = REPLACE(uid, '_', '-') WHERE uid like '%_%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, '- ', '-') WHERE uid like '%- %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, ' -', '-') WHERE uid like '% -%';
+        UPDATE public.sessions
+  		SET uid = REPLACE(uid, 'c22b_', 'C22B-') WHERE uid like '%c22b_%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'c22b-', 'C22B-') WHERE uid like '%c22b-%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'B380', 'B385') WHERE uid like 'B380%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'OBC7', '0BC7') WHERE uid like 'OBC7%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'OBC-', '0BC7-') WHERE uid like 'OBC-%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'FF55', 'F55F') WHERE uid like 'FF55';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'a7c6', 'A7C6') WHERE uid like 'a7c6%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'f55f', 'F55F') WHERE uid like 'f55f%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'b385', 'B385') WHERE uid like 'b385%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'A7C-', 'A7C6-') WHERE uid like 'A7C-%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'AF55F', 'F55F') WHERE uid like '%AF55F%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'FF55', 'F55F') WHERE uid like '%FF55%';
+		
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, '0BC7 ', '0BC7-') WHERE uid like '0BC7 %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'A7C6 ', 'A7C6-') WHERE uid like 'A7C6 %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'B385 ', 'B385-') WHERE uid like 'B385 %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'C22B ', 'C22B-') WHERE uid like 'C220B %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'F55F ', 'F55F-') WHERE uid like 'F55F %';
+		
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, '0BC70', '0BC7-0') WHERE uid like '0BC70%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'A7C60', 'A7C6-0') WHERE uid like 'A7C60%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'B3850', 'B385-0') WHERE uid like 'B3850%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'C22B0', 'C22B-0') WHERE uid like 'C22B0%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'c22b ', 'C22B-') WHERE uid like 'c22b %';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'F55F0', 'F55F-0') WHERE uid like 'F55F0%';
+		UPDATE public.sessions
+		SET uid = REPLACE(uid, 'C22B- ', 'C22B-') WHERE uid like 'C22B- %';
+		RETURN passed;
+END;			
